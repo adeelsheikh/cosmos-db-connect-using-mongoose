@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const common = require('./common');
 
 const modelName = 'Family';
 const modelSchema = new mongoose.Schema({
@@ -24,6 +25,6 @@ const modelSchema = new mongoose.Schema({
     }
 });
 
-const Family = mongoose.model(modelName, modelSchema);
+const Family = common.model.discriminator(modelName, modelSchema, common.baseConfig);
 
 module.exports = Family;
