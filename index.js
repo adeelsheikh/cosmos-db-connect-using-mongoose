@@ -6,41 +6,43 @@ const vacancyDestSvc = require('./services/vacation-destinations');
 
 db.connect();
 
-const family = new Family({
-    lastName: "Volum",
-    parents: [{
-            firstName: "Thomas"
-        },
-        {
-            firstName: "Mary Kay"
-        }
-    ],
-    children: [{
-            firstName: "Ryan",
-            gender: "male",
-            grade: 8
-        },
-        {
-            firstName: "Patrick",
-            gender: "male",
-            grade: 7
-        }
-    ],
-    pets: [{
-        givenName: "Blackie"
-    }],
-    address: {
-        country: "USA",
-        state: "WA",
-        city: "Seattle"
-    }
-});
+familySvc.getAll();
 
-familySvc.post(family);
+// const family = new Family({
+//     lastName: "Volum",
+//     parents: [{
+//             firstName: "Thomas"
+//         },
+//         {
+//             firstName: "Mary Kay"
+//         }
+//     ],
+//     children: [{
+//             firstName: "Ryan",
+//             gender: "male",
+//             grade: 8
+//         },
+//         {
+//             firstName: "Patrick",
+//             gender: "male",
+//             grade: 7
+//         }
+//     ],
+//     pets: [{
+//         givenName: "Blackie"
+//     }],
+//     address: {
+//         country: "USA",
+//         state: "WA",
+//         city: "Seattle"
+//     }
+// });
 
-const vacaySpot = new VacationDestinations({
-    name: "Honolulu",
-    country: "USA"
-});
+// familySvc.post(family);
 
-vacancyDestSvc.post(vacaySpot);
+// const vacaySpot = new VacationDestinations({
+//     name: "Honolulu",
+//     country: "USA"
+// });
+
+// vacancyDestSvc.post(vacaySpot);
